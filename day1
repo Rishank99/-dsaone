@@ -1,0 +1,26 @@
+DAY 1
+1290. Convert Binary Number in a Linked List to Integer
+
+ public int getDecimalValue(ListNode head) {
+        
+       int sum=0;
+        
+       while(head!=null){
+           sum*=2;
+           sum+=head.val;
+           head=head.next;
+       }
+        return sum;
+    }
+
+876. Middle of the Linked List
+
+    public ListNode middleNode(ListNode head) {
+        ListNode slow=head,fast=head;
+        
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
