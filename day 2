@@ -1,0 +1,41 @@
+DAY 2 (STACK)
+
+1614. Maximum Nesting Depth of the Parentheses
+
+ public int maxDepth(String s) {
+        int open =0,depth=0;
+       for(int i=0;i<s.length();i++){
+           if(s.charAt(i)=='('){
+               open++;
+           }
+           if(s.charAt(i)==')'){
+               open--;
+           }
+           depth=Math.max(depth,open);
+       } 
+        return depth;
+    }
+    
+  1021. Remove Outermost Parentheses
+  
+      public String removeOuterParentheses(String s) {
+        Stack<Character> stack=new Stack<>();
+        
+        StringBuffer str=new StringBuffer();
+        
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch=='('){
+                if(stack.size()>0){
+                    str.append(ch);
+                }
+                stack.push(ch);
+            }else{
+                stack.pop();
+                if(stack.size()>0){
+                    str.append(ch); 
+                }
+            }
+        }
+        return str.toString();
+    }
