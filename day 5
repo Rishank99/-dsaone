@@ -18,3 +18,20 @@ DAY 5(TREE)
             return root=val<root.val?searchBST(root.left,val):searchBST(root.right,val);
         }
     }
+    
+    1480. Running Sum of 1d Array
+    
+       public int[] runningSum(int[] nums) {
+        
+       for(int i=1;i<nums.length;i++){
+           nums[i]+=nums[i-1];
+       }
+        return nums;
+    }
+
+1108. Defanging an IP Address
+
+  public String defangIPaddr(String address) {
+        return address.replace(".","[.]");
+
+    }
