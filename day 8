@@ -1,0 +1,27 @@
+DAY 8(MATH)
+
+1512. Number of Good Pairs
+
+   public int numIdenticalPairs(int[] nums) {
+        int count=0;
+        int []res=new int [101];
+        for(int i=0;i<nums.length;i++){
+           count+=res[nums[i]];
+           res[nums[i]]++;
+        }
+        return count;
+    }
+    
+    1281. Subtract the Product and Sum of Digits of an Integer
+    
+       public int subtractProductAndSum(int n) {
+        int product=1,sum=0,count=0;
+        while(n>0){
+            int num1=n%10;
+            n=n/10;
+            product*=num1;
+            sum+=num1;
+            count++;
+        }
+       return (product-sum);
+    }
