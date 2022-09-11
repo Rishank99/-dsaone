@@ -1,5 +1,5 @@
 DAY 5(TREE)
-938. Range Sum of BST
+938. Range Sum of BST(**)
 
  public int rangeSumBST(TreeNode root, int low, int high) {
        if (root == null) return 0; // base case.
@@ -8,15 +8,13 @@ DAY 5(TREE)
         return root.val + rangeSumBST(root.right, low, high) + rangeSumBST(root.left, low, high); // count in both children.
     }
     
-    700. Search in a Binary Search Tree
+    700. Search in a Binary Search Tree(**)
       public TreeNode searchBST(TreeNode root, int val) {
       
-       if(root==null) return root;
-        if(root.val==val) {
-            return root;
-        }else{
-            return root=val<root.val?searchBST(root.left,val):searchBST(root.right,val);
-        }
+     if(root==null) return root;
+        if(root.val==val) return root;
+        if(val<root.val) return searchBST(root.left,val);
+        return searchBST(root.right,val);
     }
     
     1480. Running Sum of 1d Array
