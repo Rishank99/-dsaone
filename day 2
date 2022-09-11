@@ -1,6 +1,6 @@
 DAY 2 (STACK)
 
-1614. Maximum Nesting Depth of the Parentheses
+1614. Maximum Nesting Depth of the Parentheses(**)
 
  public int maxDepth(String s) {
         int open =0,depth=0;
@@ -16,7 +16,7 @@ DAY 2 (STACK)
         return depth;
     }
     
-  1021. Remove Outermost Parentheses
+  1021. Remove Outermost Parentheses(**)
   
       public String removeOuterParentheses(String s) {
         Stack<Character> stack=new Stack<>();
